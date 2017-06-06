@@ -10,10 +10,10 @@ namespace WepApi_MyDataCamp.Controllers
       
 
         [HttpGet]
-        public IActionResult Get(string moniker, bool includeTalks = false)
+        public IActionResult Get(string id, bool includeTalks = false)
         {
 
-            var speakers = includeTalks ? _repository.GetSpeakersByMonikerWithTalks(moniker) : _repository.GetSpeakersByMoniker(moniker);
+            var speakers = includeTalks ? _repository.GetSpeakersByidWithTalks(id) : _repository.GetSpeakersByMoniker(id);
 
             return Ok(_mapper.Map<IEnumerable<SpeakerModel>>(speakers));
         }
