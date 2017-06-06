@@ -10,7 +10,7 @@ using MyCodeCamp.Data.Entities;
 
 namespace MyCodeCamp.Data
 {
-  public class CampContext : IdentityDbContext
+  public class CampContext
   {
     private IConfigurationRoot _config;
 
